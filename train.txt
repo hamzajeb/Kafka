@@ -1,0 +1,17 @@
+1 - C\:Kafka> .\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+2 - C\:Kafka> .\bin\windows\kafka-server-start.bat .\config\server.properties
+3 - create topic with partition
+4 - (base) C:\Users\lenovo\OneDrive\Documents\LSI4\BIG DATA\PROJET\kafka\consumer>python consumerOfTrainingData.py
+5 - (base) C:\Users\lenovo\OneDrive\Documents\LSI4\BIG DATA\PROJET\kafka\producers>python publisherOfTrainingData.py
+
+# The command ".\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties" starts Zookeeper, which is a prerequisite 
+# for running Kafka. Zookeeper is used by Kafka to manage the entire cluster and various brokers.The command ".\bin\windows\
+# kafka-server-start.bat .\config\server.properties" starts the Kafka server After running this command, Kafka is up and running, 
+# and you can create topics to store messages. You can also produce or consume data directly from the command prompt
+
+# un "offset" est un identifiant numérique associé à chaque message stocké dans un topic particulier et une partition spécifique
+
+etape 1 et 2 aussi pour predict
+
+RUN Backend : vicorn app.main:app --host  0.0.0.0 --port  8000 
+
