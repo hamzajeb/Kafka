@@ -20,7 +20,6 @@ def login(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depend
         raise HTTPException(status_code=400, detail="Incorrect username or password")
     if not pwd_context.verify(form_data.password, user.password_hash):
         raise HTTPException(status_code=400, detail="Incorrect username or password")
-    #check if admin exists, if not return all data except bus_station_location
     if check_if_admin_exists_return_bool(db):
         access_token = create_access_token(data={"sub": user.email})
         return {"access_token": access_token, "token_type": "bearer", "user_role": user.role}

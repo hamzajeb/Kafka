@@ -31,6 +31,13 @@ def create_user(user: UserCreate, db: Session = Depends(get_db), current_user: U
     return db_user
 
 #Get a user by id
+@router.get("/user/{user_id}/items")
+@has_role(["superadmin"])
+def get_items_by_item(user_id: int, db: Session = Depends(get_db), current_user: UserDB = Depends(get_current_user)):
+    user = db.query(UserDB).filter_by(user_id=user_id).first()
+    return user.items
+
+#Get a user by id
 @router.get("/users/{user_id}")
 @has_role(["superadmin"])
 def get_user(user_id: int, db: Session = Depends(get_db), current_user: UserDB = Depends(get_current_user)):

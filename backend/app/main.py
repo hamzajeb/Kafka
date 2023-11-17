@@ -1,10 +1,12 @@
 from fastapi import FastAPI, Depends
 from app.database.connection import Base, engine
-from app.api import auth, users
+from app.api import auth, users , items
 from app.core.security import oauth2_scheme
 from app.database.connection import get_db
 from app.core.security import check_if_admin_exists
 from fastapi.middleware.cors import CORSMiddleware
+
+
 
 app = FastAPI()
 
@@ -22,6 +24,7 @@ app.add_middleware(
 
 app.include_router(auth.router)
 app.include_router(users.router, prefix="/users", tags=["users"], dependencies=[Depends(oauth2_scheme)])
+app.include_router(items.router, prefix="/items", tags=["items"], dependencies=[Depends(oauth2_scheme)])
 
 #check if any user exists
 db = next(get_db())

@@ -5,6 +5,8 @@ from pydantic import BaseModel
 from passlib.context import CryptContext
 from fastapi import Depends
 from typing import Optional
+from sqlalchemy.orm import relationship
+from app.models.item import ItemCreate, ItemDB
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
@@ -17,6 +19,9 @@ class UserDB(Base):
     email = Column(String, unique=True, index=True)
     password_hash = Column(String)
     role = Column(String)
+
+    # Define the relationship with ItemDB
+    items = relationship("ItemDB", back_populates="user")
 
     @staticmethod
     def hash_password(password: str) -> str:
