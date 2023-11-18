@@ -13,5 +13,5 @@
 
 etape 1 et 2 aussi pour predict
 
-RUN Backend : vicorn app.main:app --host  0.0.0.0 --port  8000 
-
+RUN Backend : uvicorn app.main:app --host  0.0.0.0 --port  8000 
+RUN Frontend : npm start
