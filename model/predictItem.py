@@ -14,10 +14,7 @@ os.environ['PYSPARK_PYTHON'] = sys.executable
 os.environ['PYSPARK_DRIVER_PYTHON'] = sys.executable
 # Configuration Spark
 spark = SparkSession.builder.appName("ChurnPredictionItem").getOrCreate()
-saved_model = LogisticRegressionModel.load("bestModel")
-
-# spark = SparkSession.builder.appName("ChurnPredictionItem").getOrCreate()
-# loaded_model = LogisticRegressionModel.load("bestModel")
+saved_model = LogisticRegressionModel.load(r'C:\Users\lenovo\OneDrive\Documents\LSI4\BIG DATA\PROJET\model\bestModel')
 
 def publish_to_kafka(message):
     """
@@ -60,6 +57,8 @@ def consume_and_predict():
         result = predict_with_spark_model(m.value)
         # Affichage pour illustrer
         print(f"Message consommé : {m.value}, Résultat de prédiction : {result}")
+        break
+    return result
 
 
 def predict_with_spark_model(message):
@@ -81,10 +80,10 @@ def predict_with_spark_model(message):
 
     return prediction
 
-# Exemple d'utilisation
-message_to_publish = {'Names': 'AMichele Wright', 'Age': 23.0, 'Total_Purchase': 7526.94, 'Account_Manager': 1, 'Years': 9.28, 'Num_Sites': 15.0, 'Onboard_date': '2013-07-22 18:19:54', 'Location': '21083 Nicole Junction Suite 332, Youngport, ME 23686-4381', 'Company': 'Cannon-Benson'}
-# message_to_publish = {'Names': 'Andrew Mccall', 'Age': 37.0, 'Total_Purchase': 9935.53, 'Account_Manager': 1, 'Years': 7.71, 'Num_Sites': 8.0, 'Onboard_date': '2011-08-29 18:37:54', 'Location': '080 Brewer Ports Suite 299 Erinmouth, TX 28755', 'Company': 'King Ltd'}
-publish_to_kafka(message_to_publish)
+# # Exemple d'utilisation
+# message_to_publish = {'Names': 'AMichele Wright', 'Age': 23.0, 'Total_Purchase': 7526.94, 'Account_Manager': 1, 'Years': 9.28, 'Num_Sites': 15.0, 'Onboard_date': '2013-07-22 18:19:54', 'Location': '21083 Nicole Junction Suite 332, Youngport, ME 23686-4381', 'Company': 'Cannon-Benson'}
+# # message_to_publish = {'Names': 'Andrew Mccall', 'Age': 37.0, 'Total_Purchase': 9935.53, 'Account_Manager': 1, 'Years': 7.71, 'Num_Sites': 8.0, 'Onboard_date': '2011-08-29 18:37:54', 'Location': '080 Brewer Ports Suite 299 Erinmouth, TX 28755', 'Company': 'King Ltd'}
+# publish_to_kafka(message_to_publish)
 
-# Consommer et prédire
-consume_and_predict()
+# # Consommer et prédire
+# consume_and_predict()

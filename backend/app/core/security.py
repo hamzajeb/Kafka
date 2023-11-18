@@ -16,7 +16,7 @@ from datetime import datetime, timedelta
 SECRET_KEY = "123456789"  # Replace with your secret key
 ALGORITHM = "HS256"
 
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/token")
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="getToken")
 
 
 class TokenData(BaseModel):

@@ -117,7 +117,8 @@ def train_model(dataTraining):
         if auc > best_auc:
             best_modele, best_auc = modele, auc
 
-    best_modele.write().overwrite().save("./../../model/bestModel0")
+    # best_modele.write().overwrite().save("./../../model/bestModel")
+    best_modele.write().overwrite().save("../backend/app/models-ML/bestModel")
     print("Meilleur modèle enregistré avec AUC: {:.4f}".format(best_auc))
 ######################################################################################
 # import pickle

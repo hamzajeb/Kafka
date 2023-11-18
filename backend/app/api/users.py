@@ -30,6 +30,8 @@ def create_user(user: UserCreate, db: Session = Depends(get_db), current_user: U
     db.refresh(db_user)
     return db_user
 
+
+
 #Get a user by id
 @router.get("/user/{user_id}/items")
 @has_role(["superadmin"])
