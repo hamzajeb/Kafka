@@ -41,6 +41,10 @@ export default function Navbar() {
     setAnchorEl(null);
     navigation(`/`)
   };
+  const predict = () => {
+    setAnchorEl(null);
+    navigation(`/predict`)
+  };
   const handleClose = () => {
     setAnchorEl(null);
   };
@@ -101,6 +105,7 @@ export default function Navbar() {
                 onClose={handleClose}
               >
                 <MenuItem onClick={accueil}>Accueil</MenuItem>
+                <MenuItem onClick={predict}>Predict</MenuItem>
                 <MenuItem onClick={logout}>Log Out</MenuItem>
               </Menu>:
                             <Menu

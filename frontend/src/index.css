@@ -268,6 +268,300 @@ code {
   border: 0.35rem solid;
   border-image: conic-gradient(from var(--angle), var(--c2), var(--c0) 0.1turn, var(--c0) 0.15turn, var(--c2) 0.25turn) 30;
 }
+.titlePredict{
+  margin: 0px;
+    font-size: 1.875rem;
+    line-height: 1.375;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    letter-spacing: 0em;
+    opacity: 1;
+    text-transform: none;
+    vertical-align: unset;
+    text-decoration: none;
+    color: rgb(52, 71, 103);
+    font-weight: 700;
+    margin-bottom: 2vh;
+}
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-active {
+  color: rgb(52, 71, 103) !important;
+}
+
+.step{
+  padding: 2vh 2vw;
+  margin: 4vh auto 0;
+  width: 60%;
+  height: 50vh;
+  color: rgba(0, 0, 0, 0.87);
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-width: 0px;
+    overflow-wrap: break-word;
+    background-color: rgb(255, 255, 255);
+    background-clip: border-box;
+    border: 0px solid rgba(0, 0, 0, 0.125);
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.05) 0rem 1.25rem 1.6875rem 
+}
+
+.buttonNext{
+  position: relative;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    outline: 0px;
+    border: 0px;
+    margin: 0px;
+    cursor: pointer;
+    vertical-align: middle;
+    appearance: none;
+    text-decoration: none;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    letter-spacing: 0.02857em;
+    min-width: 64px;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    line-height: 1.4;
+    text-align: center;
+    text-transform: uppercase;
+    user-select: none;
+    transition: all 150ms ease-in 0s;
+    min-height: 2.5rem;
+    box-shadow: rgba(0, 0, 0, 0.11) 0rem 0.25rem 0.4375rem -0.0625rem, rgba(0, 0, 0, 0.07) 0rem 0.125rem 0.25rem -0.0625rem;
+    padding: 0.75rem 1.5rem;
+    background-image: linear-gradient(310deg, rgb(20, 23, 39), rgb(58, 65, 111));
+    background-position-y: initial;
+    background-repeat: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+    color: rgb(255, 255, 255);
+    background-size: 150% !important;
+    background-position-x: 25% !important;
+}
+
+.buttonBack{
+  position: relative;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    outline: 0px;
+    border: 0px;
+    margin: 0px;
+    cursor: pointer;
+    vertical-align: middle;
+    appearance: none;
+    text-decoration: none;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    letter-spacing: 0.02857em;
+    min-width: 64px;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    line-height: 1.4;
+    text-align: center;
+    text-transform: uppercase;
+    user-select: none;
+    transition: all 150ms ease-in 0s;
+    min-height: 2.5rem;
+    box-shadow: rgba(0, 0, 0, 0.11) 0rem 0.25rem 0.4375rem -0.0625rem, rgba(0, 0, 0, 0.07) 0rem 0.125rem 0.25rem -0.0625rem;
+    padding: 0.75rem 1.5rem;
+    background-image: linear-gradient(310deg, rgb(206, 212, 218), rgb(235, 239, 244));
+    background-position-y: initial;
+    background-repeat: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+    color: rgb(58, 65, 111) !important;
+    background-size: 150% !important;
+    background-position-x: 25% !important;
+}
+
+.divAbout{
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 65%;
+}
+
+.textOptions{
+  margin: 0px;
+    font-size: 1.5rem;
+    line-height: 1.375;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    letter-spacing: 0em;
+    opacity: 1;
+    text-transform: none;
+    vertical-align: unset;
+    text-decoration: none;
+    color: rgb(52, 71, 103);
+    font-weight: bold;
+    margin-bottom: 6vh;
+}
+
+.css-a643pv-MuiStack-root {
+  padding-top: 0px !important;
+  /* height: 100%; */
+  background-color: rgba(0, 0, 0, 0.06) !important;
+}
+
+.buttonChoice{
+  border-radius: 15px !important;
+  background-color: transparent !important;
+    border: 0.125rem solid rgb(131, 146, 171) !important;
+    width: 10vw;
+    height: 10vw;
+}
+
+.css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase.Mui-checked+.MuiSwitch-track {
+  background-color: #1976d2 !important;
+}
+
+  .checkbox-wrapper-16 *,
+  .checkbox-wrapper-16 *:after,
+  .checkbox-wrapper-16 *:before {
+    box-sizing: border-box;
+  }
+
+  .checkbox-wrapper-16 .checkbox-input {
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(100%);
+            clip-path: inset(100%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+  .checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile {
+    border-color: #2260ff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    color: #2260ff;
+  }
+  .checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile:before {
+    transform: scale(1);
+    opacity: 1;
+    background-color: #2260ff;
+    border-color: #2260ff;
+  }
+  .checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile .checkbox-icon,
+  .checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile .checkbox-label {
+    color: #2260ff;
+  }
+  .checkbox-wrapper-16 .checkbox-input:focus + .checkbox-tile {
+    border-color: #2260ff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 0 0 4px #b5c9fc;
+  }
+  .checkbox-wrapper-16 .checkbox-input:focus + .checkbox-tile:before {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  .checkbox-wrapper-16 .checkbox-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 7rem;
+    min-height: 7rem;
+    border-radius: 0.5rem;
+    border: 2px solid #b5bfd9;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.15s ease;
+    cursor: pointer;
+    position: relative;
+  }
+  .checkbox-wrapper-16 .checkbox-tile:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 2px solid #b5bfd9;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 0.25rem;
+    left: 0.25rem;
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.25s ease;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='192' height='192' fill='%23FFFFFF' viewBox='0 0 256 256'%3E%3Crect width='256' height='256' fill='none'%3E%3C/rect%3E%3Cpolyline points='216 72.005 104 184 48 128.005' fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round' stroke-width='32'%3E%3C/polyline%3E%3C/svg%3E");
+    background-size: 12px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+  .checkbox-wrapper-16 .checkbox-tile:hover {
+    border-color: #2260ff;
+  }
+  .checkbox-wrapper-16 .checkbox-tile:hover:before {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  .checkbox-wrapper-16 .checkbox-icon {
+    transition: 0.375s ease;
+    color: #494949;
+  }
+  .checkbox-wrapper-16 .checkbox-icon svg {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .checkbox-wrapper-16 .checkbox-label {
+    color: #707070;
+    transition: 0.375s ease;
+    text-align: center;
+  }
+
+.about{
+    margin: 0px;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    letter-spacing: 0.01071em;
+    opacity: 1;
+    text-transform: none;
+    vertical-align: unset;
+    text-decoration: none;
+    color: rgb(103, 116, 142);
+    font-weight: 400;
+}
+
+.css-1hv8oq8-MuiStepLabel-label {
+  color: rgb(52, 71, 103) !important;
+  font-weight: 600 !important;
+  font-size: 1.1rem !important;
+
+}
+.textPredict{
+  margin: 0px;
+  margin-bottom: 4vh;
+  font-size: 1.25rem;
+  line-height: 1.375;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  letter-spacing: 0em;
+  opacity: 1;
+  text-transform: none;
+  vertical-align: unset;
+  text-decoration: none;
+  color: rgb(131, 146, 171);
+  font-weight: 400;
+}
 .li:nth-child(3) {
   animation-delay: 1.5s;
   border: 0.35rem solid;

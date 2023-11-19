@@ -6,6 +6,7 @@ import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import React, { useEffect, useRef ,useState} from 'react';
 import TextField from '@mui/material/TextField';
+import { toast } from 'react-toastify';
 import { Outlet, useNavigate } from 'react-router-dom'
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
@@ -73,7 +74,16 @@ export default function Login() {
         Cookies.set('fName',res.first_name)
         Cookies.set('Lname',res.last_name)
         Cookies.set('email',user.username)
-        handleClickSnack()
+        toast.success('You Are Connected !', {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+      });
         navigation('/predict')
     }).catch((err) => {
         console.log(err)
@@ -110,7 +120,7 @@ export default function Login() {
   const { vertical, horizontal } = state;
   return (
     <>   
-    <Snackbar anchorOrigin={{ vertical, horizontal }} open={openSnack} autoHideDuration={2000} onClose={handleCloseSnack}>
+    <Snackbar anchorOrigin={{ vertical, horizontal }} open={openSnack}  onClose={handleCloseSnack} disableWindowBlurListener>
   <Alert onClose={handleCloseSnack} severity="success" sx={{ width: '100%' }}>
   You Are Connected  !
   </Alert>

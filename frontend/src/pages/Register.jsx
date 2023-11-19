@@ -6,6 +6,7 @@ import Snackbar from '@mui/material/Snackbar';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
+import { toast } from 'react-toastify';
 import Checkbox from '@mui/material/Checkbox';
 import { Outlet, useNavigate } from 'react-router-dom'
 import Link from '@mui/material/Link';
@@ -65,7 +66,16 @@ export default function Register() {
       handleOpen()
     CreateUser(user).then((res) => {
         handleClose()
-        handleClickSnack()
+        toast.success('You Are Registered Successfully  !', {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+      });
         navigation('/sign-in')
     }).catch((err) => {
         console.log(err)
