@@ -22,3 +22,8 @@ export async function CreateUser(data) {
     const res = API.post('/users/register', data, configJson)
     return res
 }
+
+export async function GetItems(email) {
+    const res = API.get(`/users/user/${email}/items`, config)
+    return res
+}
